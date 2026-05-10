@@ -6,7 +6,7 @@ import { Footer } from "@/components/storm/Footer";
 import { usePlayers, fileToDataURL, defaultPlayers } from "@/lib/storm-store";
 import logo from "@/assets/storm-logo.png";
 
-export const Route = createFileRoute("/squad/")({
+export const Route = createFileRoute("/squad/$playerId")({
   head: ({ params }) => {
     const p = defaultPlayers.find(pl => pl.id === params.playerId);
     const title = p ? `${p.name} · #${p.number} — Storm Breakers` : "Player — Storm Breakers";

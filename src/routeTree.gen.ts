@@ -10,43 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SquadRouteImport } from './routes/squad.'
+import { Route as SquadPlayerIdRouteImport } from './routes/squad.$playerId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SquadRoute = SquadRouteImport.update({
-  id: '/squad/',
-  path: '/squad/',
+const SquadPlayerIdRoute = SquadPlayerIdRouteImport.update({
+  id: '/squad/$playerId',
+  path: '/squad/$playerId',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/squad/': typeof SquadRoute
+  '/squad/$playerId': typeof SquadPlayerIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/squad': typeof SquadRoute
+  '/squad/$playerId': typeof SquadPlayerIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/squad/': typeof SquadRoute
+  '/squad/$playerId': typeof SquadPlayerIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/squad/'
+  fullPaths: '/' | '/squad/$playerId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/squad'
-  id: '__root__' | '/' | '/squad/'
+  to: '/' | '/squad/$playerId'
+  id: '__root__' | '/' | '/squad/$playerId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  SquadRoute: typeof SquadRoute
+  SquadPlayerIdRoute: typeof SquadPlayerIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,11 +58,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/squad/': {
-      id: '/squad/'
-      path: '/squad'
-      fullPath: '/squad/'
-      preLoaderRoute: typeof SquadRouteImport
+    '/squad/$playerId': {
+      id: '/squad/$playerId'
+      path: '/squad/$playerId'
+      fullPath: '/squad/$playerId'
+      preLoaderRoute: typeof SquadPlayerIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -70,8 +70,18 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  SquadRoute: SquadRoute,
+  SquadPlayerIdRoute: SquadPlayerIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
