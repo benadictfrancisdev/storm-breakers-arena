@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
-import p1 from "@/assets/player1.jpg";
-import p2 from "@/assets/player2.jpg";
-import p3 from "@/assets/player3.jpg";
-import p4 from "@/assets/player4.jpg";
-
-const players = [
-  { img: p3, n: "07", name: "Marcus Vale", nick: "The Captain", role: "Forward / Leader", goals: 142, assists: 88, mvp: 4 },
-  { img: p1, n: "10", name: "Kai Nakamura", nick: "Lightning", role: "Playmaker", goals: 98, assists: 121, mvp: 3 },
-  { img: p2, n: "09", name: "Diego Cruz", nick: "El Toro", role: "Striker", goals: 168, assists: 42, mvp: 5 },
-  { img: p4, n: "01", name: "Anton Reyes", nick: "The Wall", role: "Goalkeeper", goals: 0, assists: 6, mvp: 2 },
-];
+import { Link } from "@tanstack/react-router";
+import { usePlayers } from "@/lib/storm-store";
+import logo from "@/assets/storm-logo.png";
 
 export function Squad() {
+  const { players } = usePlayers();
   return (
     <section id="squad" className="relative py-28 md:py-40 px-5">
       <div className="max-w-7xl mx-auto">
@@ -22,47 +15,52 @@ export function Squad() {
               <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">02 — The Squad</span>
             </div>
             <h2 className="font-display text-5xl md:text-7xl leading-[0.9]">
-              Meet the <span className="text-gradient-blade">storm.</span>
+              Twenty names. <br/>One <span className="text-gradient-blade">storm.</span>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-sm">Eleven on the pitch. One heart pounding. The names that carry the badge.</p>
+          <p className="text-muted-foreground max-w-sm">
+            The brotherhood that takes the pitch. Tap any player to open their card and edit name, jersey number or photo.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {players.map((p, i) => (
-            <motion.article
-              key={p.n}
-              initial={{ opacity: 0, y: 40 }}
+            <motion.div
+              key={p.id}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative overflow-hidden bg-card border border-border hover-lift">
-              <div className="relative aspect-[3/4] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--electric)]/30 via-transparent to-[var(--blood)]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay z-10" />
-                <img src={p.img} alt={p.name} loading="lazy" width={1024} height={1280}
-                  className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-[1200ms]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-                <div className="absolute top-4 left-4 z-20">
-                  <div className="font-display text-[5rem] leading-none text-foreground/90 drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">{p.n}</div>
-                </div>
-                <div className="absolute bottom-4 right-4 z-20 text-right">
-                  <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-[var(--electric)]">{p.role}</div>
-                </div>
-              </div>
-              <div className="p-5 relative">
-                <h3 className="font-display text-2xl text-foreground">{p.name}</h3>
-                <p className="text-sm text-[var(--blood)] italic">"{p.nick}"</p>
-                <div className="mt-4 grid grid-cols-3 gap-2 pt-4 border-t border-border">
-                  {[["G", p.goals], ["A", p.assists], ["MVP", p.mvp]].map(([k,v]) => (
-                    <div key={k as string}>
-                      <div className="text-[9px] font-mono tracking-[0.3em] uppercase text-muted-foreground">{k}</div>
-                      <div className="font-display text-xl text-foreground">{v}</div>
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: (i % 10) * 0.04 }}>
+              <Link
+                to="/squad/$playerId"
+                params={{ playerId: p.id }}
+                className="group block relative overflow-hidden bg-card border border-border hover-lift">
+                <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-[var(--electric)]/15 via-card to-[var(--blood)]/15">
+                  {p.image ? (
+                    <img src={p.image} alt={p.name} loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-[1200ms]" />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity">
+                      <img src={logo} alt="" className="w-24 h-24 object-contain" />
                     </div>
-                  ))}
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute top-3 left-3 z-10">
+                    <div className="font-display text-4xl leading-none text-foreground/95 drop-shadow-[0_3px_12px_rgba(0,0,0,0.7)]">{p.number}</div>
+                  </div>
+                  {p.badge && (
+                    <div className="absolute top-3 right-3 z-10 px-2 py-0.5 bg-[var(--blood)] text-[9px] font-mono tracking-[0.2em] uppercase text-foreground">
+                      {p.badge === "Captain" ? "C" : "VC"}
+                    </div>
+                  )}
                 </div>
-              </div>
-              <div className="absolute inset-0 pointer-events-none border border-[var(--electric)]/0 group-hover:border-[var(--electric)]/60 transition-colors duration-500" />
-            </motion.article>
+                <div className="p-3 relative">
+                  <h3 className="font-display text-lg text-foreground leading-tight truncate">{p.name}</h3>
+                  <div className="text-[10px] font-mono tracking-[0.25em] uppercase text-[var(--electric)] mt-1 truncate">{p.role}</div>
+                </div>
+                <div className="absolute inset-0 pointer-events-none border border-[var(--electric)]/0 group-hover:border-[var(--electric)]/60 transition-colors duration-500" />
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

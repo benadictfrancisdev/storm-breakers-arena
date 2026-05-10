@@ -1,15 +1,4 @@
 import { motion } from "framer-motion";
-import m1 from "@/assets/mem1.jpg";
-import m3 from "@/assets/mem3.jpg";
-import m5 from "@/assets/mem5.jpg";
-import m4 from "@/assets/mem4.jpg";
-
-const posts = [
-  { img: m1, user: "@stormnation", txt: "GOOSEBUMPS. That confetti drop will live in my head forever. ⚡", likes: "12.4k" },
-  { img: m3, user: "@stadium7", txt: "Marcus Vale is on another planet right now. Captain. Legend.", likes: "8.9k" },
-  { img: m5, user: "@brotherhood_ultra", txt: "Once a Breaker, always a Breaker. We ride together.", likes: "21.1k" },
-  { img: m4, user: "@thunderkid", txt: "My boy made his debut tonight. Tears in my eyes 🖤💙", likes: "5.7k" },
-];
 
 const chants = [
   "WE ARE THE STORM!",
@@ -47,27 +36,7 @@ export function Community() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {posts.map((p, i) => (
-            <motion.article key={i}
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-card border border-border overflow-hidden group hover-lift">
-              <div className="aspect-square overflow-hidden">
-                <img src={p.img} alt="" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1200ms]" />
-              </div>
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="text-xs font-mono text-[var(--electric)]">{p.user}</div>
-                  <div className="text-[10px] font-mono text-muted-foreground">♥ {p.likes}</div>
-                </div>
-                <p className="text-sm text-foreground/90 leading-relaxed">{p.txt}</p>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center glass-strong p-10 md:p-14 relative overflow-hidden">
+        <div className="text-center glass-strong p-10 md:p-14 relative overflow-hidden">
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--electric)]/10 via-transparent to-[var(--blood)]/10" />
           <h3 className="font-display text-3xl md:text-5xl">Join the Brotherhood</h3>
           <p className="mt-3 text-muted-foreground max-w-lg mx-auto">Get matchday alerts, exclusive squad drops, and the inside frame from the locker room.</p>

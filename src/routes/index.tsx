@@ -6,8 +6,6 @@ import { Identity } from "@/components/storm/Identity";
 import { Squad } from "@/components/storm/Squad";
 import { Jerseys } from "@/components/storm/Jerseys";
 import { Memories } from "@/components/storm/Memories";
-import { Trophies } from "@/components/storm/Trophies";
-import { Matches } from "@/components/storm/Matches";
 import { Community } from "@/components/storm/Community";
 import { Footer } from "@/components/storm/Footer";
 
@@ -33,8 +31,6 @@ function Index() {
       <Squad />
       <Jerseys />
       <Memories />
-      <Trophies />
-      <Matches />
       <Community />
       <Footer />
     </main>
