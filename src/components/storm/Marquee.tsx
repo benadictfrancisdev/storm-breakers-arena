@@ -1,5 +1,5 @@
 export function Marquee() {
-  const items = ["Brotherhood", "Loyalty", "Aggression", "Victory", "Legacy", "Passion", "Honor", "Fearless"];
+  const items = ["Brotherhood", "Loyalty", "Boundaries", "Wickets", "Centuries", "Victory", "Legacy", "Fearless"];
   return (
     <div className="relative border-y border-border bg-background overflow-hidden">
       <div className="flex marquee-track py-5 whitespace-nowrap">

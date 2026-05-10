@@ -6,8 +6,6 @@ const links = [
   { href: "#squad", label: "Squad" },
   { href: "#jerseys", label: "Jerseys" },
   { href: "#memories", label: "Memories" },
-  { href: "#trophies", label: "Trophies" },
-  { href: "#matches", label: "Matches" },
   { href: "#community", label: "Community" },
 ];
 
@@ -34,8 +32,8 @@ export function Nav() {
           ))}
         </nav>
         <div className="hidden lg:flex items-center gap-3">
-          <a href="#matches" className="text-xs uppercase tracking-[0.2em] px-4 py-2 border border-[var(--electric)]/40 text-[var(--electric)] hover:bg-[var(--electric)]/10 transition-colors">
-            Next Match
+          <a href="#squad" className="text-xs uppercase tracking-[0.2em] px-4 py-2 border border-[var(--electric)]/40 text-[var(--electric)] hover:bg-[var(--electric)]/10 transition-colors">
+            The Squad
           </a>
         </div>
         <button onClick={() => setOpen(o => !o)} className="lg:hidden p-2 text-foreground" aria-label="menu">

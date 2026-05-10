@@ -19,7 +19,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
           className="flex items-center gap-3 mb-6">
           <div className="h-px w-12 bg-[var(--electric)]" />
-          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Est. 2014 · Official Team</span>
+          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Storm Breakers · Cricket Club</span>
         </motion.div>
 
         <motion.h1
@@ -32,8 +32,8 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-          We don't chase the storm. <span className="text-foreground">We are the storm.</span>{" "}
-          Brotherhood forged in sweat. Legacy carved in thunder.
+          Bat. Ball. Brotherhood. <span className="text-foreground">We are the storm.</span>{" "}
+          Twenty brothers. One badge. Every boundary fought for together.
         </motion.p>
 
         <motion.div
@@ -43,9 +43,9 @@ export function Hero() {
             <span>Meet The Squad</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
-          <a href="#matches" className="group inline-flex items-center gap-3 px-7 py-4 border border-foreground/30 text-foreground font-display tracking-[0.25em] text-sm uppercase hover:border-[var(--blood)] hover:text-[var(--blood)] transition-all">
+          <a href="#jerseys" className="group inline-flex items-center gap-3 px-7 py-4 border border-foreground/30 text-foreground font-display tracking-[0.25em] text-sm uppercase hover:border-[var(--blood)] hover:text-[var(--blood)] transition-all">
             <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--blood)] opacity-75"/><span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--blood)]"/></span>
-            Enter The Arena
+            Official Kit
           </a>
         </motion.div>
 
@@ -54,10 +54,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border max-w-3xl">
           {[
-            ["12", "Trophies"],
-            ["89%", "Win Rate"],
-            ["247", "Matches"],
-            ["10y", "Legacy"],
+            ["20", "Squad"],
+            ["1", "Brotherhood"],
+            ["XI", "On The Pitch"],
+            ["∞", "Legacy"],
           ].map(([n, l]) => (
             <div key={l} className="bg-background/70 backdrop-blur p-5">
               <div className="font-display text-3xl md:text-4xl text-gradient-blade">{n}</div>
