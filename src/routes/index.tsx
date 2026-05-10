@@ -1,26 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/storm/Nav";
+import { Hero } from "@/components/storm/Hero";
+import { Marquee } from "@/components/storm/Marquee";
+import { Identity } from "@/components/storm/Identity";
+import { Squad } from "@/components/storm/Squad";
+import { Jerseys } from "@/components/storm/Jerseys";
+import { Memories } from "@/components/storm/Memories";
+import { Trophies } from "@/components/storm/Trophies";
+import { Matches } from "@/components/storm/Matches";
+import { Community } from "@/components/storm/Community";
+import { Footer } from "@/components/storm/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Storm Breakers — Official Team · Brotherhood. Legacy. Thunder." },
+      { name: "description", content: "Step into the Storm Breakers arena. Meet the squad, witness the trophies, and join the brotherhood behind one of the most fearless teams in the game." },
+      { property: "og:title", content: "Storm Breakers — Enter The Arena" },
+      { property: "og:description", content: "Cinematic home of the Storm Breakers squad. Players, jerseys, fixtures, memories and legacy." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="relative bg-background text-foreground overflow-x-hidden">
+      <Nav />
+      <Hero />
+      <Marquee />
+      <Identity />
+      <Squad />
+      <Jerseys />
+      <Memories />
+      <Trophies />
+      <Matches />
+      <Community />
+      <Footer />
+    </main>
+  );
 }
