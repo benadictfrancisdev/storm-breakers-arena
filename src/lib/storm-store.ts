@@ -1,4 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
+import nandaImg from "@/assets/leaders/nanda-captain.jpg";
+import felixImg from "@/assets/leaders/felix-vc.jpg";
+import prakashImg from "@/assets/leaders/prakash-coach.jpg";
 
 // ---- Players ----
 export type Player = {
@@ -14,8 +17,8 @@ const PLAYERS_KEY = "sb_players_v1";
 const MEMORIES_KEY = "sb_memories_v1";
 
 export const defaultPlayers: Player[] = [
-  { id: "nanda",    name: "Nanda",     number: "6",  role: "All-Rounder",  image: null, badge: "Captain" },
-  { id: "felix",    name: "Felix",     number: "33", role: "Batsman",      image: null, badge: "Vice Captain" },
+  { id: "nanda",    name: "Nanda",     number: "6",  role: "All-Rounder",  image: nandaImg, badge: "Captain" },
+  { id: "felix",    name: "Felix",     number: "33", role: "Batsman",      image: felixImg, badge: "Vice Captain" },
   { id: "navnith",  name: "Navnith",   number: "7",  role: "All-Rounder",  image: null },
   { id: "yuhendhar",name: "Yuhendhar", number: "1",  role: "Wicket-Keeper",image: null },
   { id: "charan",   name: "Charan",    number: "30", role: "Batsman",      image: null },
@@ -23,7 +26,7 @@ export const defaultPlayers: Player[] = [
   { id: "sam",      name: "Sam",       number: "25", role: "All-Rounder",  image: null },
   { id: "vimal",    name: "Vimal",     number: "18", role: "Batsman",      image: null },
   { id: "vishwa",   name: "Vishwa",    number: "17", role: "Bowler",       image: null },
-  { id: "prakash",  name: "Prakash",   number: "22", role: "All-Rounder",  image: null },
+  { id: "prakash",  name: "Prakash",   number: "22", role: "Head Coach",   image: prakashImg, badge: "Coach" },
   { id: "madhan",   name: "Madhan",    number: "45", role: "Bowler",       image: null },
   { id: "benadict", name: "Benadict",  number: "4",  role: "Batsman",      image: null },
   { id: "jai",      name: "Jai",       number: "8",  role: "All-Rounder",  image: null },
