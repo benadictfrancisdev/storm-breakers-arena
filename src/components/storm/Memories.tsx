@@ -11,10 +11,24 @@ import felix from "@/assets/memories/felix-33.jpg";
 import kanna from "@/assets/memories/kanna-2.jpg";
 import bat from "@/assets/memories/player-bat.jpg";
 import ball from "@/assets/memories/player-ball.jpg";
+import groupField1 from "@/assets/memories/group-field-1.jpg";
+import groupField2 from "@/assets/memories/group-field-2.jpg";
+import familyCircle from "@/assets/memories/family-circle.jpg";
+import squadBench from "@/assets/memories/squad-bench.jpg";
+import batKnockIn from "@/assets/memories/bat-knock-in.jpg";
+import bowlerGround from "@/assets/memories/bowler-ground.jpg";
+import turfNight from "@/assets/memories/turf-night.jpg";
 
 type Memory = { src: string; label: string };
 
 const MEMORIES: Memory[] = [
+  { src: familyCircle, label: "In that circle · We were FAMILY" },
+  { src: turfNight,    label: "Turf nights · Storm Breakers XI" },
+  { src: groupField1,  label: "Ground day · Squad selfie" },
+  { src: groupField2,  label: "Brothers in blue · Match ready" },
+  { src: squadBench,   label: "After the game · Bench laughs" },
+  { src: batKnockIn,   label: "Knocking in · Bat ritual" },
+  { src: bowlerGround, label: "Walk back · Bowler's mark" },
   { src: huddle1, label: "Pre-match huddle · Brotherhood" },
   { src: lineup1, label: "Squad lined up · Match day" },
   { src: felix,   label: "Felix · #33 Vice Captain" },
