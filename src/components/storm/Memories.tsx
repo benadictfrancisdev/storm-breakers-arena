@@ -18,10 +18,26 @@ import squadBench from "@/assets/memories/squad-bench.jpg";
 import batKnockIn from "@/assets/memories/bat-knock-in.jpg";
 import bowlerGround from "@/assets/memories/bowler-ground.jpg";
 import turfNight from "@/assets/memories/turf-night.jpg";
+import cageNightTeam from "@/assets/memories/cage-night-team.jpg";
+import groundSquad1 from "@/assets/memories/ground-squad-1.jpg";
+import groundSquad2 from "@/assets/memories/ground-squad-2.jpg";
+import coachPortrait from "@/assets/memories/coach-portrait.jpg";
+import batPickup from "@/assets/memories/bat-pickup.jpg";
+import palmGround from "@/assets/memories/palm-ground.jpg";
+import benadict4 from "@/assets/memories/benadict-4.jpg";
+import cageVictory from "@/assets/memories/cage-victory.jpg";
 
 type Memory = { src: string; label: string };
 
 const MEMORIES: Memory[] = [
+  { src: benadict4,     label: "Benadict · #4 walks the crease" },
+  { src: cageNightTeam, label: "Turf cage · Night squad" },
+  { src: cageVictory,   label: "Inside the cage · Brothers" },
+  { src: groundSquad1,  label: "Ground day · Blue army" },
+  { src: groundSquad2,  label: "Sunset selfie · Storm XI" },
+  { src: coachPortrait, label: "On the field · Game face" },
+  { src: palmGround,    label: "Palm grove pitch · Home ground" },
+  { src: batPickup,     label: "Picking the willow · Bat day" },
   { src: familyCircle, label: "In that circle · We were FAMILY" },
   { src: turfNight,    label: "Turf nights · Storm Breakers XI" },
   { src: groupField1,  label: "Ground day · Squad selfie" },
