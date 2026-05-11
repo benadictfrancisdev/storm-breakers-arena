@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import nandaImg from "@/assets/leaders/nanda-captain.jpg";
+import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import felixImg from "@/assets/leaders/felix-vc.jpg";
-import prakashImg from "@/assets/leaders/prakash-coach.jpg";
+import nandaImg from "@/assets/leaders/prakash-coach.jpg";
 
 const leaders = [
   { img: nandaImg,   name: "Nanda",   number: "6",  role: "Captain",       words: "I don't lead the team. I carry it. Every ball, every over — I'm with my brothers." },
