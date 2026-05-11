@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "#identity", label: "Identity" },
+  { href: "#identity", label: "Mission" },
   { href: "#squad", label: "Squad" },
   { href: "#jerseys", label: "Jerseys" },
   { href: "#memories", label: "Memories" },
