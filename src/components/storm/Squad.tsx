@@ -50,7 +50,7 @@ export function Squad() {
                   </div>
                   {p.badge && (
                     <div className="absolute top-3 right-3 z-10 px-2 py-0.5 bg-[var(--blood)] text-[9px] font-mono tracking-[0.2em] uppercase text-foreground">
-                      {p.badge === "Captain" ? "C" : "VC"}
+                      {p.badge === "Captain" ? "C" : p.badge === "Vice Captain" ? "VC" : p.badge === "Coach" ? "COACH" : p.badge}
                     </div>
                   )}
                 </div>
