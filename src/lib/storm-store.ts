@@ -15,7 +15,7 @@ export type Player = {
   badge?: string; // Captain / Vice Captain
 };
 
-const PLAYERS_KEY = "sb_players_v2";
+const PLAYERS_KEY = "sb_players_v3";
 const MEMORIES_KEY = "sb_memories_v1";
 
 export const defaultPlayers: Player[] = [
