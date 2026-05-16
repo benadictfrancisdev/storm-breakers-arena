@@ -1,6 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
+const VIDEOS = [
+  { src: "/memories/storm-1.mp4", label: "Storm in motion · Match clip" },
+  { src: "/memories/storm-2.mp4", label: "Boundary moments · Storm XI" },
+  { src: "/memories/storm-3.mp4", label: "On the ground · Brotherhood" },
+];
+
 import huddle1 from "@/assets/memories/team-huddle-1.jpg";
 import huddle2 from "@/assets/memories/team-huddle-2.jpg";
 import lineup1 from "@/assets/memories/team-lineup-1.jpg";
@@ -77,6 +83,31 @@ export function Memories() {
           <p className="text-muted-foreground max-w-sm">
             Match-day frames, locker-room laughs, trophy lifts. Tap any image to see it full-size.
           </p>
+        </div>
+
+        {/* Video reels */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
+          {VIDEOS.map((v, i) => (
+            <motion.div
+              key={v.src}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="group relative overflow-hidden bg-card aspect-video">
+              <video
+                src={v.src}
+                className="w-full h-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+              />
+              <div className="absolute bottom-0 inset-x-0 p-3 pointer-events-none bg-gradient-to-t from-background/90 to-transparent">
+                <div className="font-display text-sm text-foreground">{v.label}</div>
+              </div>
+              <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-[var(--electric)]/30 group-hover:ring-[var(--electric)]/70 transition-all" />
+            </motion.div>
+          ))}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-3">

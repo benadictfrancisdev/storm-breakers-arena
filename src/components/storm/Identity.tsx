@@ -2,38 +2,43 @@ import { motion } from "framer-motion";
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import felixImg from "@/assets/leaders/felix-vc.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
+import logo from "@/assets/storm-logo.png";
 
 const leaders = [
-  { img: nandaImg,   name: "Nanda",   number: "6",  role: "Captain",       words: "I don't lead the team. I carry it. Every ball, every over — I'm with my brothers." },
-  { img: prakashImg, name: "Prakash", number: "22", role: "Head Coach",    words: "I don't build cricketers. I build belief. The rest, these boys do on the field." },
-  { img: felixImg,   name: "Felix",   number: "33", role: "Vice Captain",  words: "When the captain roars, I echo. When the team falls quiet, I bring the noise back." },
+  { img: nandaImg,   name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
+  { img: prakashImg, name: "Prakash", number: "22", role: "Head Coach",   tagline: "The voice in every huddle. The plan behind every win." },
+  { img: felixImg,   name: "Felix",   number: "33", role: "Vice Captain", tagline: "All-rounder. The spark when the game needs lifting." },
 ];
 
 export function Identity() {
   return (
     <section id="identity" className="relative py-28 md:py-40 px-5">
       <div className="max-w-7xl mx-auto">
-        {/* Mission */}
-        <div className="grid lg:grid-cols-12 gap-12 mb-24">
-          <div className="lg:col-span-5">
+        {/* About + Fans */}
+        <div className="grid lg:grid-cols-12 gap-12 mb-24 items-center">
+          <div className="lg:col-span-5 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-5">
               <div className="h-px w-10 bg-[var(--blood)]" />
-              <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--blood)] uppercase">01 — Our Mission</span>
+              <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--blood)] uppercase">01 — About Us</span>
+            </div>
+            <div className="relative mb-8">
+              <div className="absolute inset-0 blur-3xl bg-[var(--electric)]/30 rounded-full" />
+              <img src={logo} alt="Storm Breakers official crest" className="relative w-56 md:w-72 object-contain drop-shadow-[0_0_30px_oklch(0.68_0.22_245/0.6)]" />
             </div>
             <h2 className="font-display text-5xl md:text-7xl leading-[0.9]">
-              We don't play <br/>for trophies. <br/>
-              We play for <span className="text-gradient-blade">each other.</span>
+              For the team. <br/>
+              For the <span className="text-gradient-blade">fans.</span>
             </h2>
           </div>
           <div className="lg:col-span-7 lg:pl-10 space-y-6 text-base md:text-lg leading-relaxed">
             <p className="text-foreground/90">
-              Storm Breakers started in a dusty ground with cracked bats, second-hand pads, and brothers who refused to leave the field even after sunset. No sponsors. No spotlight. Just hunger.
+              Storm Breakers Cricket Club is a brotherhood built on local grounds, late evenings and the love of the game. Eighteen players, one badge, one home crowd.
             </p>
             <p className="text-muted-foreground">
-              Every wicket we take is a memory. Every run we make is a story. Every loss made us closer, every win made us louder. The blue jersey isn't a uniform — it's a promise to the man standing next to you.
+              To the families on the boundary, the friends on the bench, and every fan who shows up in blue — this club is yours too. Your cheers carry every shot, every wicket, every win.
             </p>
             <p className="text-[var(--electric)] font-display tracking-[0.2em] uppercase text-sm">
-              Bat. Ball. Brotherhood. Forever.
+              Storm Breakers · For the fans, always.
             </p>
           </div>
         </div>
@@ -74,7 +79,7 @@ export function Identity() {
                 </div>
               </div>
               <div className="p-5 border-t border-border/60">
-                <p className="text-sm text-muted-foreground italic leading-relaxed">"{l.words}"</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{l.tagline}</p>
               </div>
               <div className="absolute inset-0 pointer-events-none border border-[var(--electric)]/0 group-hover:border-[var(--electric)]/60 transition-colors duration-500" />
             </motion.div>
