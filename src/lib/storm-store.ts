@@ -15,7 +15,7 @@ export type Player = {
   badge?: string; // Captain / Vice Captain
 };
 
-const PLAYERS_KEY = "sb_players_v3";
+const PLAYERS_KEY = "sb_players_v5";
 const MEMORIES_KEY = "sb_memories_v1";
 
 // Order: Head Coach → Batsmen → WK-Batsman → All-Rounders → Bowler → ND players
