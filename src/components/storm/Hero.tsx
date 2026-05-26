@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-team.jpg";
+import heroImg from "@/assets/hero-team-back.jpg";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center noise">
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Storm Breakers squad" className="w-full h-full object-cover scale-110" width={1920} height={1088} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
+        <img src={heroImg} alt="Storm Breakers squad lined up from behind, jerseys showing names and numbers" className="w-full h-full object-cover object-bottom scale-110" width={1920} height={1088} />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-background/40" />
         <div className="absolute inset-0 scanline opacity-40" />
         {/* glowing horizontal lines */}
         <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, delay: 0.5 }}
