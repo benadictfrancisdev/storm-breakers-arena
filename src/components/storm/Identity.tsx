@@ -3,6 +3,24 @@ import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import felixImg from "@/assets/leaders/felix-vc.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
 import logo from "@/assets/storm-logo.png";
+import kannaImg from "@/assets/memories/kanna-2.jpg";
+import benadictImg from "@/assets/memories/benadict-4.jpg";
+import felixMemImg from "@/assets/memories/felix-33.jpg";
+import coachPortrait from "@/assets/memories/coach-portrait.jpg";
+import bat from "@/assets/memories/player-bat.jpg";
+import ball from "@/assets/memories/player-ball.jpg";
+
+const avatars = [
+  { img: nandaImg,      label: "Nanda · C" },
+  { img: felixImg,      label: "Felix · VC" },
+  { img: prakashImg,    label: "Coach" },
+  { img: kannaImg,      label: "Kanna · 2" },
+  { img: benadictImg,   label: "Benadict · 4" },
+  { img: felixMemImg,   label: "Felix · 33" },
+  { img: coachPortrait, label: "On field" },
+  { img: bat,           label: "Crease" },
+  { img: ball,          label: "Bowler" },
+];
 
 const leaders = [
   { img: nandaImg,   name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
@@ -40,6 +58,36 @@ export function Identity() {
             <p className="text-[var(--electric)] font-display tracking-[0.2em] uppercase text-sm">
               Storm Breakers · For the fans, always.
             </p>
+          </div>
+        </div>
+
+        {/* Circular player avatars — the brothers */}
+        <div className="mb-24">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px w-10 bg-[var(--gold)]" />
+            <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--gold)] uppercase">The Brothers</span>
+          </div>
+          <div className="flex flex-wrap gap-5 md:gap-7">
+            {avatars.map((a, i) => (
+              <motion.div
+                key={a.label}
+                initial={{ opacity: 0, scale: 0.85 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.45, delay: i * 0.05 }}
+                className="group flex flex-col items-center gap-2">
+                <div className="relative">
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-[var(--electric)] via-[var(--navy)] to-[var(--gold)] opacity-70 group-hover:opacity-100 blur-[2px] transition-opacity" />
+                  <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-2 ring-background">
+                    <img src={a.img} alt={a.label} loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  </div>
+                </div>
+                <div className="text-[10px] font-mono tracking-[0.2em] uppercase text-muted-foreground group-hover:text-foreground transition-colors">
+                  {a.label}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
