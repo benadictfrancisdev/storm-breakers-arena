@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-team.jpg";
+import familyCircle from "@/assets/hero-family-circle.jpg";
 
 export function Hero() {
   return (
@@ -22,19 +23,42 @@ export function Hero() {
           <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Storm Breakers · Cricket Club</span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
-          className="font-display text-[clamp(3.5rem,12vw,11rem)] leading-[0.85] tracking-tight">
-          <span className="block text-gradient-metal">Storm</span>
-          <span className="block text-gradient-blade -mt-2">Breakers</span>
-        </motion.h1>
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
+          <div>
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}
+              className="font-display text-[clamp(3rem,10vw,9rem)] leading-[0.85] tracking-tight">
+              <span className="block text-gradient-metal">Storm</span>
+              <span className="block text-gradient-blade -mt-2">Breakers</span>
+            </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-          Bat. Ball. Brotherhood. <span className="text-foreground">We are the storm.</span>{" "}
-          Twenty brothers. One badge. Every boundary fought for together.
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
+              Bat. Ball. Brotherhood. <span className="text-foreground">We are the storm.</span>{" "}
+              Twenty brothers. One badge. Every boundary fought for together.
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative mx-auto w-full max-w-md lg:max-w-lg">
+            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[var(--electric)]/40 via-[var(--navy)]/30 to-[var(--gold)]/40 blur-2xl opacity-70" />
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-foreground/15 shadow-2xl bg-background/40 backdrop-blur">
+              <img
+                src={familyCircle}
+                alt="Storm Breakers huddle — in that circle, we were family"
+                className="block w-full h-auto object-contain"
+                loading="eager"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent mix-blend-multiply" />
+            </div>
+            <div className="mt-4 text-center font-mono text-[10px] tracking-[0.35em] text-muted-foreground uppercase">
+              In that circle · we were family
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.7 }}
