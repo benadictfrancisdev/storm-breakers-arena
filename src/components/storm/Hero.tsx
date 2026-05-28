@@ -49,14 +49,23 @@ export function Hero() {
               animate={{ opacity: [0.5, 0.85, 0.5], scale: [1, 1.04, 1] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-foreground/15 shadow-2xl bg-background/40 backdrop-blur">
+            {/* secondary chromatic rim — silver sweep that breathes with the halo */}
+            <motion.div
+              className="absolute -inset-1 rounded-[1.9rem] bg-[conic-gradient(from_140deg,transparent_0deg,var(--silver)_60deg,transparent_140deg,var(--electric)_220deg,transparent_300deg)] opacity-40 blur-[6px]"
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 36, repeat: Infinity, ease: "linear" }}
+            />
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-[var(--silver)]/25 shadow-2xl bg-background/40 backdrop-blur ring-1 ring-[var(--electric)]/20">
               <img
                 src={familyCircle}
                 alt="Storm Breakers huddle — in that circle, we were family"
                 className="block w-full h-auto object-contain"
                 loading="eager"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent mix-blend-multiply" />
+              {/* color-flow grading: cool electric lift on top-left, warm metal fade at base */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[var(--electric)]/15 via-transparent to-[var(--silver)]/10 mix-blend-screen" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/55 via-background/5 to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_15%,oklch(0.85_0.05_240/0.18),transparent_55%)]" />
             </div>
             <div className="mt-4 text-center font-mono text-[10px] tracking-[0.35em] text-muted-foreground uppercase">
               In that circle · we were family
