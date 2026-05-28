@@ -44,7 +44,11 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
             className="relative mx-auto w-full max-w-md lg:max-w-lg">
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[var(--electric)]/40 via-[var(--navy)]/30 to-[var(--gold)]/40 blur-2xl opacity-70" />
+            <motion.div
+              className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[var(--electric)]/40 via-[var(--navy)]/30 to-[var(--gold)]/40 blur-2xl opacity-70"
+              animate={{ opacity: [0.5, 0.85, 0.5], scale: [1, 1.04, 1] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            />
             <div className="relative overflow-hidden rounded-[1.75rem] border border-foreground/15 shadow-2xl bg-background/40 backdrop-blur">
               <img
                 src={familyCircle}
