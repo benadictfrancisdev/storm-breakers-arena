@@ -2,6 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const VIDEOS = [
+  { src: "/memories/8-on-fire.mp4", label: "#8 · On fire" },
+  { src: "/memories/1-striking-wind-1.mp4", label: "#1 · Striking in wind session" },
+  { src: "/memories/1-striking-wind-2.mp4", label: "#1 · Striking in wind session" },
   { src: "/memories/kanna-best-catch.mp4", label: "Kanna · #2 best catch" },
   { src: "/memories/storm-1.mp4", label: "Storm in motion · Match clip" },
   { src: "/memories/storm-2.mp4", label: "Boundary moments · Storm XI" },
