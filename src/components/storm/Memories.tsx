@@ -4,6 +4,7 @@ import stormIntro from "../../../public/memories/storm-intro-cinematic.mp4.asset
 
 const VIDEOS = [
   { src: stormIntro.url, label: "Storm Breakers · Cinematic intro" },
+  { src: "/memories/jk-smash.mp4", label: "Jeya Kumar · JK smash session" },
   { src: "/memories/6-nanda-winning-knock.mp4", label: "#6 Captain Nanda · Winning knock — last over thrill" },
   { src: "/memories/8-on-fire.mp4", label: "#8 · On fire" },
   { src: "/memories/1-striking-wind-1.mp4", label: "#1 · Striking in wind session" },
