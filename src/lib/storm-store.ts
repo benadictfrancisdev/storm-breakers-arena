@@ -47,7 +47,7 @@ export const defaultPlayers: Player[] = [
   { id: "madhan",   name: "Madhan",    number: "45", role: "Bowler",           image: null },
 
   // ND players
-  { id: "jaikumar", name: "Jai Kumar", number: "ND", role: "Batsman",          image: null },
+  { id: "jaikumar", name: "Jeya Kumar", number: "ND", role: "Batsman",          image: null },
   { id: "prince",   name: "Prince",    number: "ND", role: "All-Rounder",      image: null },
 ];
 
