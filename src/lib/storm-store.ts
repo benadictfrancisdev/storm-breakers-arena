@@ -15,7 +15,7 @@ export type Player = {
   badge?: string; // Captain / Vice Captain
 };
 
-const PLAYERS_KEY = "sb_players_v6";
+const PLAYERS_KEY = "sb_players_v7";
 const MEMORIES_KEY = "sb_memories_v1";
 
 // Order: Head Coach → Batsmen → WK-Batsman → All-Rounders → Bowler → ND players
@@ -42,6 +42,7 @@ export const defaultPlayers: Player[] = [
   { id: "jai",      name: "Jai",       number: "8",  role: "All-Rounder",      image: null },
   { id: "kanna",    name: "Kanna",     number: "2",  role: "All-Rounder",      image: null },
   { id: "sunil",    name: "Sunil",     number: "5",  role: "Spin / All-Rounder", image: null },
+  { id: "subash",   name: "Subash",    number: "9",  role: "Spin / All-Rounder", image: null },
 
   // Bowler
   { id: "madhan",   name: "Madhan",    number: "45", role: "Bowler",           image: null },
