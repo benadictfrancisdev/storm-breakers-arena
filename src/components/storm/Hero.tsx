@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import heroAsset from "@/assets/hero-squad-field.jpg.asset.json";
+import heroAsset from "@/assets/hero-squad-jerseys.jpg.asset.json";
 import familyCircle from "@/assets/hero-family-circle.jpg";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center noise">
       <div className="absolute inset-0">
-        <img src={heroAsset.url} alt="Storm Breakers squad on the field" className="w-full h-full object-cover scale-110" width={1920} height={1088} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
+        <img src={heroAsset.url} alt="Storm Breakers squad jerseys on the field" className="w-full h-full object-cover object-center" width={1600} height={720} />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/80" />
         <div className="absolute inset-0 scanline opacity-40" />
         {/* glowing horizontal lines */}
         <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, delay: 0.5 }}
@@ -20,28 +20,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
           className="flex items-center gap-3 mb-6">
           <div className="h-px w-12 bg-[var(--electric)]" />
-          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase flex items-center gap-2">
-            Storm Breakers · Cricket Club ·
-            <motion.span
-              initial={{ opacity: 0, letterSpacing: "0.05em" }}
-              animate={{ opacity: 1, letterSpacing: "0.3em" }}
-              transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-              className="relative inline-flex items-center gap-1 text-[var(--silver)]"
-            >
-              <span>Since</span>
-              <motion.span
-                animate={{ textShadow: [
-                  "0 0 0px var(--electric)",
-                  "0 0 12px var(--electric)",
-                  "0 0 0px var(--electric)",
-                ]}}
-                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
-                className="font-display text-[13px] tracking-[0.2em] text-[var(--electric)]"
-              >
-                2022
-              </motion.span>
-            </motion.span>
-          </span>
+          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Storm Breakers · Cricket Club</span>
         </motion.div>
 
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
@@ -52,6 +31,31 @@ export function Hero() {
               <span className="block text-gradient-metal">Storm</span>
               <span className="block text-gradient-blade -mt-2">Breakers</span>
             </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
+              className="mt-5 inline-flex items-center gap-3 pl-3 pr-4 py-2 border border-[var(--electric)]/50 bg-background/40 backdrop-blur-sm">
+              <motion.span
+                animate={{ opacity: [0.4, 1, 0.4] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="h-2 w-2 rounded-full bg-[var(--electric)] shadow-[0_0_10px_var(--electric)]"
+              />
+              <span className="font-mono text-[10px] tracking-[0.4em] text-muted-foreground uppercase">Since</span>
+              <motion.span
+                animate={{
+                  textShadow: [
+                    "0 0 0px var(--electric)",
+                    "0 0 14px var(--electric)",
+                    "0 0 0px var(--electric)",
+                  ],
+                }}
+                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+                className="font-display text-xl md:text-2xl tracking-[0.25em] text-[var(--electric)]"
+              >
+                2022
+              </motion.span>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
