@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import heroAsset from "@/assets/hero-squad-field.jpg.asset.json";
+import heroAsset from "@/assets/hero-squad-jerseys.jpg.asset.json";
 import familyCircle from "@/assets/hero-family-circle.jpg";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center noise">
       <div className="absolute inset-0">
-        <img src={heroAsset.url} alt="Storm Breakers squad on the field" className="w-full h-full object-cover object-bottom scale-[1.35] sm:scale-[1.2] origin-bottom" width={1920} height={1200} />
+        <img src={heroAsset.url} alt="Storm Breakers squad jerseys on the field" className="w-full h-full object-cover object-center" width={1600} height={720} />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/80" />
         <div className="absolute inset-0 scanline opacity-40" />
         {/* glowing horizontal lines */}
