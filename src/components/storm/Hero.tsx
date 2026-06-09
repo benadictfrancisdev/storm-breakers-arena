@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-team.jpg";
+import heroImg from "@/assets/hero-street-cricket.jpg";
 import familyCircle from "@/assets/hero-family-circle.jpg";
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
           className="flex items-center gap-3 mb-6">
           <div className="h-px w-12 bg-[var(--electric)]" />
-          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Storm Breakers · Cricket Club</span>
+          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Storm Breakers · Cricket Club · Since 2021</span>
         </motion.div>
 
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
