@@ -1,12 +1,25 @@
 import { motion } from "framer-motion";
-import heroAsset from "@/assets/hero-squad-jerseys.jpg.asset.json";
+import heroAsset from "@/assets/hero-squad-pano.jpg.asset.json";
 import familyCircle from "@/assets/hero-family-circle.jpg";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center noise">
       <div className="absolute inset-0">
-        <img src={heroAsset.url} alt="Storm Breakers squad jerseys on the field" className="w-full h-full object-cover object-center" width={1600} height={720} />
+        {/* Blurred fill so the full panoramic photo stays uncropped without black bars */}
+        <img
+          src={heroAsset.url}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover scale-125 blur-2xl opacity-60"
+        />
+        <img
+          src={heroAsset.url}
+          alt="Storm Breakers squad jerseys on the field"
+          className="relative w-full h-full object-contain object-center"
+          width={1339}
+          height={379}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/80" />
         <div className="absolute inset-0 scanline opacity-40" />
         {/* glowing horizontal lines */}
