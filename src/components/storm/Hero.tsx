@@ -32,6 +32,31 @@ export function Hero() {
               <span className="block text-gradient-blade -mt-2">Breakers</span>
             </motion.h1>
 
+            <motion.div
+              initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
+              className="mt-5 inline-flex items-center gap-3 pl-3 pr-4 py-2 border border-[var(--electric)]/50 bg-background/40 backdrop-blur-sm">
+              <motion.span
+                animate={{ opacity: [0.4, 1, 0.4] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="h-2 w-2 rounded-full bg-[var(--electric)] shadow-[0_0_10px_var(--electric)]"
+              />
+              <span className="font-mono text-[10px] tracking-[0.4em] text-muted-foreground uppercase">Since</span>
+              <motion.span
+                animate={{
+                  textShadow: [
+                    "0 0 0px var(--electric)",
+                    "0 0 14px var(--electric)",
+                    "0 0 0px var(--electric)",
+                  ],
+                }}
+                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+                className="font-display text-xl md:text-2xl tracking-[0.25em] text-[var(--electric)]"
+              >
+                2022
+              </motion.span>
+            </motion.div>
+
             <motion.p
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
