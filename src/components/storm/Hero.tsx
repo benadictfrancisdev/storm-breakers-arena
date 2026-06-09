@@ -6,8 +6,8 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center noise">
       <div className="absolute inset-0">
-        <img src={heroAsset.url} alt="Storm Breakers squad on the field" className="w-full h-full object-cover scale-110" width={1920} height={1088} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
+        <img src={heroAsset.url} alt="Storm Breakers squad on the field" className="w-full h-full object-cover object-bottom scale-[1.35] sm:scale-[1.2] origin-bottom" width={1920} height={1200} />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/80" />
         <div className="absolute inset-0 scanline opacity-40" />
         {/* glowing horizontal lines */}
         <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, delay: 0.5 }}
@@ -20,28 +20,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
           className="flex items-center gap-3 mb-6">
           <div className="h-px w-12 bg-[var(--electric)]" />
-          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase flex items-center gap-2">
-            Storm Breakers · Cricket Club ·
-            <motion.span
-              initial={{ opacity: 0, letterSpacing: "0.05em" }}
-              animate={{ opacity: 1, letterSpacing: "0.3em" }}
-              transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-              className="relative inline-flex items-center gap-1 text-[var(--silver)]"
-            >
-              <span>Since</span>
-              <motion.span
-                animate={{ textShadow: [
-                  "0 0 0px var(--electric)",
-                  "0 0 12px var(--electric)",
-                  "0 0 0px var(--electric)",
-                ]}}
-                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
-                className="font-display text-[13px] tracking-[0.2em] text-[var(--electric)]"
-              >
-                2022
-              </motion.span>
-            </motion.span>
-          </span>
+          <span className="font-mono text-[11px] tracking-[0.3em] text-[var(--electric)] uppercase">Storm Breakers · Cricket Club</span>
         </motion.div>
 
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
