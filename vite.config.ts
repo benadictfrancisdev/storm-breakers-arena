@@ -8,8 +8,6 @@ const isVercel = process.env.DEPLOY_TARGET === "vercel";
 
 export default defineConfig({
   plugins: [tsConfigPaths(), tailwindcss()],
-  // Disable the Cloudflare Vite plugin when targeting Vercel.
-  cloudflare: isVercel ? false : undefined,
   // Forward the chosen build target to TanStack Start.
   tanstackStart: isVercel ? { target: "vercel" } : undefined,
   vite: {
