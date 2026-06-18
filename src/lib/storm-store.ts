@@ -39,8 +39,9 @@ export const defaultPlayers: Player[] = [
   { id: "charan",   name: "Charan",    number: "30", role: "All-Rounder",      image: null },
   { id: "sam",      name: "Sam",       number: "25", role: "All-Rounder",      image: null },
   { id: "benadict", name: "Benadict",  number: "4",  role: "All-Rounder",      image: null },
+  { id: "veera",    name: "Veera",     number: "27", role: "All-Rounder",      image: null },
   { id: "jai",      name: "Jai",       number: "8",  role: "All-Rounder",      image: null },
-  { id: "kanna",    name: "Kanna",     number: "2",  role: "All-Rounder",      image: null },
+  { id: "kanna",    name: "Kanna",     number: "33", role: "All-Rounder",      image: null },
   { id: "sunil",    name: "Sunil",     number: "5",  role: "Spin / All-Rounder", image: null },
   { id: "subash",   name: "Subash",    number: "9",  role: "Spin / All-Rounder", image: null },
 
