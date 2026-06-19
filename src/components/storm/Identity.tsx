@@ -23,9 +23,9 @@ const avatars = [
 ];
 
 const leaders = [
-  { img: nandaImg,   name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
-  { img: prakashImg, name: "Prakash", number: "22", role: "Head Coach",   tagline: "The voice in every huddle. The plan behind every win." },
-  { img: felixImg,   name: "Felix",   number: "33", role: "Vice Captain", tagline: "All-rounder. The spark when the game needs lifting." },
+  { img: nandaImg,      name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
+  { img: prakashImg,    name: "Prakash", number: "22", role: "Head Coach",   tagline: "The voice in every huddle. The plan behind every win." },
+  { img: charanImg.url, name: "Charan",  number: "30", role: "Vice Captain", tagline: "All-rounder. The spark when the game needs lifting." },
 ];
 
 export function Identity() {
