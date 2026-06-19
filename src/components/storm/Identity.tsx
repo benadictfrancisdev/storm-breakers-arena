@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
-import felixImg from "@/assets/leaders/felix-vc.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
+import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
 import logo from "@/assets/storm-logo.png";
 import kannaImg from "@/assets/memories/kanna-2.jpg";
 import benadictImg from "@/assets/memories/benadict-4.jpg";
@@ -12,7 +12,7 @@ import ball from "@/assets/memories/player-ball.jpg";
 
 const avatars = [
   { img: nandaImg,      label: "Nanda · C" },
-  { img: felixImg,      label: "Felix · VC" },
+  { img: charanImg.url, label: "Charan · VC" },
   { img: prakashImg,    label: "Coach" },
   { img: kannaImg,      label: "Kanna · 2" },
   { img: benadictImg,   label: "Benadict · 4" },
@@ -23,9 +23,9 @@ const avatars = [
 ];
 
 const leaders = [
-  { img: nandaImg,   name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
-  { img: prakashImg, name: "Prakash", number: "22", role: "Head Coach",   tagline: "The voice in every huddle. The plan behind every win." },
-  { img: felixImg,   name: "Felix",   number: "33", role: "Vice Captain", tagline: "All-rounder. The spark when the game needs lifting." },
+  { img: nandaImg,      name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
+  { img: prakashImg,    name: "Prakash", number: "22", role: "Head Coach",   tagline: "The voice in every huddle. The plan behind every win." },
+  { img: charanImg.url, name: "Charan",  number: "30", role: "Vice Captain", tagline: "All-rounder. The spark when the game needs lifting." },
 ];
 
 export function Identity() {
