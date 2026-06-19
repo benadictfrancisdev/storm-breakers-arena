@@ -33,10 +33,10 @@ export const defaultPlayers: Player[] = [
   { id: "bharath",  name: "Bharath",   number: "3",  role: "WK / Batsman",     image: null },
 
   // All-Rounders
-  { id: "felix",    name: "Felix",     number: "33", role: "All-Rounder",      image: felixImg, badge: "Vice Captain" },
+  { id: "felix",    name: "Felix",     number: "33", role: "All-Rounder",      image: null },
   { id: "navnith",  name: "Navnith",   number: "7",  role: "All-Rounder",      image: null },
   { id: "yuhendhar",name: "Yuhendhar", number: "1",  role: "All-Rounder",      image: null },
-  { id: "charan",   name: "Charan",    number: "30", role: "All-Rounder",      image: null },
+  { id: "charan",   name: "Charan",    number: "30", role: "All-Rounder",      image: charanImg.url, badge: "Vice Captain" },
   { id: "sam",      name: "Sam",       number: "25", role: "All-Rounder",      image: null },
   { id: "benadict", name: "Benadict",  number: "4",  role: "All-Rounder",      image: null },
   { id: "veera",    name: "Veera",     number: "27", role: "All-Rounder",      image: null },
