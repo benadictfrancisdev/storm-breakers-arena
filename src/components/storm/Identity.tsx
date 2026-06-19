@@ -12,7 +12,7 @@ import ball from "@/assets/memories/player-ball.jpg";
 
 const avatars = [
   { img: nandaImg,      label: "Nanda · C" },
-  { img: felixImg,      label: "Felix · VC" },
+  { img: charanImg.url, label: "Charan · VC" },
   { img: prakashImg,    label: "Coach" },
   { img: kannaImg,      label: "Kanna · 2" },
   { img: benadictImg,   label: "Benadict · 4" },
