@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
 import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
+import jaiImg from "@/assets/jai-2nd-vice-captain.png.asset.json";
 import logo from "@/assets/storm-logo.png";
 import kannaImg from "@/assets/memories/kanna-2.jpg";
 import benadictImg from "@/assets/memories/benadict-4.jpg";

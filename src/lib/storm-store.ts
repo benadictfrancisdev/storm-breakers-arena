@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
 import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
+import jaiImg from "@/assets/jai-2nd-vice-captain.png.asset.json";
 
 // ---- Players ----
 export type Player = {
