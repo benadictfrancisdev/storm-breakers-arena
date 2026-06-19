@@ -105,7 +105,7 @@ export function Identity() {
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {leaders.map((l, i) => (
             <motion.div
               key={l.name}
