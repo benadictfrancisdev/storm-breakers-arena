@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
 import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
+import jaiImg from "@/assets/jai-2nd-vice-captain.png.asset.json";
 
 // ---- Players ----
 export type Player = {
@@ -40,7 +41,7 @@ export const defaultPlayers: Player[] = [
   { id: "sam",      name: "Sam",       number: "25", role: "All-Rounder",      image: null },
   { id: "benadict", name: "Benadict",  number: "4",  role: "All-Rounder",      image: null },
   { id: "veera",    name: "Veera",     number: "27", role: "All-Rounder",      image: null },
-  { id: "jai",      name: "Jai",       number: "8",  role: "All-Rounder",      image: null },
+  { id: "jai",      name: "Jai",       number: "8",  role: "All-Rounder",      image: jaiImg.url, badge: "2nd Vice Captain" },
   { id: "kanna",    name: "Kanna",     number: "33", role: "All-Rounder",      image: null },
   { id: "sunil",    name: "Sunil",     number: "5",  role: "Spin / All-Rounder", image: null },
   { id: "subash",   name: "Subash",    number: "9",  role: "Spin / All-Rounder", image: null },
