@@ -2,8 +2,8 @@ import { useEffect, useState, useCallback } from "react";
 // Note: file names are historical — actual photo contents are swapped on disk.
 // Identity.tsx maps these correctly; mirror the same mapping here.
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
-import felixImg from "@/assets/leaders/felix-vc.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
+import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
 
 // ---- Players ----
 export type Player = {
