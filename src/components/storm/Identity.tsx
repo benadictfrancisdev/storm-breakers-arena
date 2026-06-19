@@ -14,8 +14,9 @@ import ball from "@/assets/memories/player-ball.jpg";
 const avatars = [
   { img: nandaImg,      label: "Nanda · C" },
   { img: charanImg.url, label: "Charan · VC" },
+  { img: jaiImg.url,    label: "Jai · 8" },
   { img: prakashImg,    label: "Coach" },
-  { img: kannaImg,      label: "Kanna · 2" },
+  { img: kannaImg,      label: "Kanna · 33" },
   { img: benadictImg,   label: "Benadict · 4" },
   { img: felixMemImg,   label: "Felix · 33" },
   { img: coachPortrait, label: "On field" },
@@ -24,9 +25,10 @@ const avatars = [
 ];
 
 const leaders = [
-  { img: nandaImg,      name: "Nanda",   number: "6",  role: "Captain",      tagline: "Leads from the front. Bats with the team on his shoulders." },
-  { img: prakashImg,    name: "Prakash", number: "22", role: "Head Coach",   tagline: "The voice in every huddle. The plan behind every win." },
-  { img: charanImg.url, name: "Charan",  number: "30", role: "Vice Captain", tagline: "All-rounder. The spark when the game needs lifting." },
+  { img: nandaImg,      name: "Nanda",   number: "6",  role: "Captain",       tagline: "Leads from the front. Bats with the team on his shoulders." },
+  { img: prakashImg,    name: "Prakash", number: "22", role: "Head Coach",    tagline: "The voice in every huddle. The plan behind every win." },
+  { img: charanImg.url, name: "Charan",  number: "30", role: "Vice Captain",  tagline: "All-rounder. The spark when the game needs lifting." },
+  { img: jaiImg.url,    name: "Jai",     number: "8",  role: "2nd Vice Captain", tagline: "All-rounder. The energy that lifts the squad when it matters." },
 ];
 
 export function Identity() {
