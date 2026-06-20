@@ -13,6 +13,11 @@ import charanPortraitImg from "@/assets/players/charan.png.asset.json";
 import sunilImg from "@/assets/players/sunil.png.asset.json";
 import monishImg from "@/assets/players/monish.png.asset.json";
 import yuhendharImg from "@/assets/players/yuhendhar.png.asset.json";
+import yuhendharV2Img from "@/assets/players/yuhendhar-v2.png.asset.json";
+import benadictImg from "@/assets/players/benadict.png.asset.json";
+import balajiImg from "@/assets/players/balaji.png.asset.json";
+import stephenImg from "@/assets/players/stephen.png.asset.json";
+import kanishkarImg from "@/assets/players/kanishkar.jpeg.asset.json";
 
 // ---- Players ----
 export type Player = {
@@ -24,7 +29,7 @@ export type Player = {
   badge?: string; // Captain / Vice Captain
 };
 
-const PLAYERS_KEY = "sb_players_v8";
+const PLAYERS_KEY = "sb_players_v9";
 const MEMORIES_KEY = "sb_memories_v1";
 
 // Order: Head Coach → Batsmen → WK-Batsman → All-Rounders → Bowler → ND players
@@ -44,10 +49,10 @@ export const defaultPlayers: Player[] = [
   // All-Rounders
   { id: "felix",    name: "Felix",     number: "33", role: "All-Rounder",      image: null },
   { id: "navnith",  name: "Navnith",   number: "7",  role: "All-Rounder",      image: navnithImg.url },
-  { id: "yuhendhar",name: "Yuhendhar", number: "1",  role: "All-Rounder",      image: yuhendharImg.url },
+  { id: "yuhendhar",name: "Yuhendhar", number: "1",  role: "All-Rounder",      image: yuhendharV2Img.url },
   { id: "charan",   name: "Charan",    number: "30", role: "All-Rounder",      image: charanPortraitImg.url, badge: "Vice Captain" },
   { id: "sam",      name: "Sam",       number: "25", role: "All-Rounder",      image: null },
-  { id: "benadict", name: "Benadict",  number: "4",  role: "All-Rounder",      image: null },
+  { id: "benadict", name: "Benadict",  number: "4",  role: "All-Rounder",      image: benadictImg.url },
   { id: "veera",    name: "Veera",     number: "27", role: "All-Rounder",      image: veeraImg.url },
   { id: "jai",      name: "Jaishwal",  number: "8",  role: "All-Rounder",      image: jaishwalImg.url, badge: "2nd Vice Captain" },
   { id: "kanna",    name: "Kanna",     number: "33", role: "All-Rounder",      image: null },
@@ -60,6 +65,9 @@ export const defaultPlayers: Player[] = [
   // ND players
   { id: "jaikumar", name: "Jeya Kumar", number: "44", role: "Batsman",          image: jeyakumarImg.url },
   { id: "prince",   name: "Prince",    number: "ND", role: "All-Rounder",      image: princeImg.url },
+  { id: "balaji",   name: "Balaji",    number: "68", role: "All-Rounder",      image: balajiImg.url },
+  { id: "stephen",  name: "Stephen",   number: "9",  role: "All-Rounder",      image: stephenImg.url },
+  { id: "kanishkar",name: "Kanishkar", number: "10", role: "All-Rounder",      image: kanishkarImg.url },
 ];
 
 function readJSON<T>(key: string, fallback: T): T {
