@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
-import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
+import charanImg from "@/assets/players/charan.png.asset.json";
 import jaishwalImg from "@/assets/players/jaishwal.jpeg.asset.json";
 import logo from "@/assets/storm-logo.png";
 import kannaImg from "@/assets/memories/kanna-2.jpg";
