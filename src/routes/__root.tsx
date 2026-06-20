@@ -82,8 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Storm Breakers Cricket Club — Official Team" },
       { property: "og:description", content: "Storm Breakers CC — brotherhood, bat & ball. The official home of the 20-man squad: players, jerseys, memories and legacy." },
       { name: "twitter:description", content: "Storm Breakers CC — brotherhood, bat & ball. The official home of the 20-man squad: players, jerseys, memories and legacy." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8288931b-a832-4915-889c-cc1943696ebc" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8288931b-a832-4915-889c-cc1943696ebc" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/P9hd7sgqUEMnNuxkXl3Vnwi7fDi2/social-images/social-1781980161976-WhatsApp_Image_2026-05-10_at_09.24.31.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/P9hd7sgqUEMnNuxkXl3Vnwi7fDi2/social-images/social-1781980161976-WhatsApp_Image_2026-05-10_at_09.24.31.webp" },
     ],
     links: [
       {
