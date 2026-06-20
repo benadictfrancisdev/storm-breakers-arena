@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import prakashImg from "@/assets/leaders/nanda-captain.jpg";
-import nandaImg from "@/assets/leaders/prakash-coach.jpg";
+import prakashImg from "@/assets/players/prakash-v2.jpeg.asset.json";
+import nandaImg from "@/assets/players/nanda-v2.png.asset.json";
 import charanImg from "@/assets/players/charan.png.asset.json";
 import jaishwalImg from "@/assets/players/jaishwal.jpeg.asset.json";
 import logo from "@/assets/storm-logo.png";
@@ -12,10 +12,10 @@ import bat from "@/assets/memories/player-bat.jpg";
 import ball from "@/assets/memories/player-ball.jpg";
 
 const avatars = [
-  { img: nandaImg,      label: "Nanda · C" },
+  { img: nandaImg.url,  label: "Nanda · C" },
   { img: charanImg.url, label: "Charan · VC" },
   { img: jaishwalImg.url, label: "Jaishwal · 8" },
-  { img: prakashImg,    label: "Coach" },
+  { img: prakashImg.url,label: "Coach" },
   { img: kannaImg,      label: "Kanna · 33" },
   { img: benadictImg,   label: "Benadict · 4" },
   { img: felixMemImg,   label: "Felix · 33" },
@@ -25,9 +25,9 @@ const avatars = [
 ];
 
 const leaders = [
-  { img: nandaImg,      name: "Nanda",   number: "6",  role: "Captain",       tagline: "Leads from the front. Bats with the team on his shoulders." },
-  { img: prakashImg,    name: "Prakash", number: "22", role: "Head Coach",    tagline: "The voice in every huddle. The plan behind every win." },
-  { img: charanImg.url, name: "Charan",  number: "30", role: "Vice Captain",  tagline: "All-rounder. The spark when the game needs lifting." },
+  { img: nandaImg.url,  name: "Nanda",   number: "6",  role: "Captain",       tagline: "Leads from the front. Bats with the team on his shoulders." },
+  { img: prakashImg.url,name: "Prakash", number: "22", role: "Head Coach",    tagline: "The voice in every huddle. The plan behind every win." },
+  { img: charanImg.url, name: "Charan",  number: "65", role: "Vice Captain",  tagline: "All-rounder. The spark when the game needs lifting." },
   { img: jaishwalImg.url, name: "Jaishwal", number: "8",  role: "2nd Vice Captain", tagline: "All-rounder. The energy that lifts the squad when it matters." },
 ];
 
