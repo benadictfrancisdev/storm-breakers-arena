@@ -3,8 +3,6 @@ import { useEffect, useState, useCallback } from "react";
 // Identity.tsx maps these correctly; mirror the same mapping here.
 import prakashImg from "@/assets/leaders/nanda-captain.jpg";
 import nandaImg from "@/assets/leaders/prakash-coach.jpg";
-import charanImg from "@/assets/charan-vice-captain.jpg.asset.json";
-import jaiImg from "@/assets/jai-2nd-vice-captain.png.asset.json";
 import navnithImg from "@/assets/players/navnith.jpeg.asset.json";
 import princeImg from "@/assets/players/prince.png.asset.json";
 import veeraImg from "@/assets/players/veera.png.asset.json";
